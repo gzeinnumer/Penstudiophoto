@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobileyuone2.penstudiophoto">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,9 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.Booking"></activity>
-        <activity android:name=".activity.Main2Activity" />
-        <activity android:name=".activity.Register" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,6 +32,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".activity.MapsAllActivity"
+            android:label="@string/title_activity_maps_all"></activity>
+        <activity android:name=".activity.Booking" />
+        <activity android:name=".activity.Main2Activity" />
+        <activity android:name=".activity.Register" />
+        <activity
             android:name=".activity.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".activity.Home" />
@@ -45,7 +50,7 @@
         </activity>
         <activity android:name=".activity.DetailStudiophoto" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
     </application>
 
 </manifest>

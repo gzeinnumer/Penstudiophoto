@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -159,5 +160,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void onClickMain(View view) {
+        startActivity(new Intent(getApplicationContext(), MapsAllActivity.class));
     }
 }

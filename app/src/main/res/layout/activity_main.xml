@@ -16,6 +16,13 @@
     </ViewFlipper>
 
 
+
+    <Button
+        android:text="All Maps"
+        android:onClick="onClickMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +30,8 @@
         android:text="Search Lokasi">
 
     </TextView>
+
+
 
     <EditText
         android:id="@+id/edSearch"
@@ -35,5 +44,6 @@
         android:id="@+id/rv_studiophoto"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 </LinearLayout>

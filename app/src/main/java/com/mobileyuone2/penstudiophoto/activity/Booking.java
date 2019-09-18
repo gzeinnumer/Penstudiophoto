@@ -53,9 +53,9 @@ public class Booking extends AppCompatActivity {
         id_pel = findViewById(R.id.tv_id_user);
         tglFoto = findViewById(R.id.tgl_foto);
         btnPesan = findViewById(R.id.btn_pesan);
+        spinnersatu = findViewById(R.id.spinnersatu);
+        spinnerdua = findViewById(R.id.spinnerdua);
 
-        adapterPaket= new AdapterPaket(getApplicationContext(), mList);
-        adapterJenisPaket= new AdapterJenisPaket(getApplicationContext(), nList);
         initData();
 
         sessionManager = new SessionManager(this);
@@ -86,7 +86,7 @@ public class Booking extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseDataRegister> call, Response<ResponseDataRegister> response) {
                 Toast.makeText(Booking.this, response.body().getPesan(), Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), DetailStudiophoto.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
             }
 
@@ -98,14 +98,16 @@ public class Booking extends AppCompatActivity {
     }
 
     private void initData() {
-        String var = getIntent().getStringExtra("data");
+        String var = getIntent().getStringExtra("dat_");
 //        Toast.makeText(this, var, Toast.LENGTH_SHORT).show();
         RetroServer.getInstance().paketphoto(var).enqueue(new Callback<ResponseReadDataPaketById>() {
             @Override
             public void onResponse(Call<ResponseReadDataPaketById> call, Response<ResponseReadDataPaketById> response) {
                 if (response.isSuccessful()){
                     mList = response.body().getResultDataPaketphotos();
-                    initSpinner();
+                    adapterPaket = new AdapterPaket(getApplicationContext(), mList);
+                    adapterPaket.notifyDataSetChanged();
+                    initSpinner(adapterPaket);
                 }
             }
 
@@ -116,13 +118,8 @@ public class Booking extends AppCompatActivity {
         });
     }
 
-    private void initSpinner() {
-        spinnersatu = findViewById(R.id.spinnersatu);
-
-        adapterPaket = new AdapterPaket(this, mList);
-
-        spinnersatu.setAdapter(adapterPaket);
-
+    private void initSpinner(AdapterPaket adapter) {
+        spinnersatu.setAdapter(adapter);
         spinnersatu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -140,15 +137,14 @@ public class Booking extends AppCompatActivity {
     }
 
     private void initDataJenis(String itemSelected) {
-        nList.clear();
         RetroServer.getInstance().getDataJenisPaket(itemSelected).enqueue(new Callback<ResponseDataJenisPaket>() {
             @Override
             public void onResponse(Call<ResponseDataJenisPaket> call, Response<ResponseDataJenisPaket> response) {
                 if (response.isSuccessful()){
                     nList=response.body().getResultDataJenispakets();
-                    initDataJenisToSpinner();
+                    adapterJenisPaket = new AdapterJenisPaket(getApplicationContext(), nList);
+                    initDataJenisToSpinner(adapterJenisPaket);
                 }
-
             }
 
             @Override
@@ -158,16 +154,8 @@ public class Booking extends AppCompatActivity {
         });
     }
 
-    private void initDataJenisToSpinner() {
-
-        spinnerdua = findViewById(R.id.spinnerdua);
-
-        adapterJenisPaket = new AdapterJenisPaket(this, nList);
-
-        adapterJenisPaket.notifyDataSetChanged();
-
-        spinnerdua.setAdapter(adapterJenisPaket);
-
+    private void initDataJenisToSpinner(AdapterJenisPaket adapter) {
+        spinnerdua.setAdapter(adapter);
         spinnerdua.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -177,9 +165,8 @@ public class Booking extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                var2 = Booking.this.nList.get(0).getIdJenispaket();
+                var2 = nList.get(0).getIdJenispaket();
             }
         });
     }
-
 }
