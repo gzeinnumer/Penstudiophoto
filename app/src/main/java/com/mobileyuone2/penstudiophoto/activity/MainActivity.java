@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             finish();
             return true;
+        } else if (id == R.id.about){
+            Toast.makeText(this, "ditekan", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);

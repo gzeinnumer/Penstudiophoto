@@ -1,12 +1,14 @@
 package com.mobileyuone2.penstudiophoto.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mobileyuone2.penstudiophoto.R;
+import com.mobileyuone2.penstudiophoto.activity.DescActivity;
 import com.mobileyuone2.penstudiophoto.model.ResultDataPaketphotosItem;
 
 import java.util.List;
@@ -32,13 +34,22 @@ public class AdpaterPaketphoto extends RecyclerView.Adapter<AdpaterPaketphoto.My
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyHolder holder, final int position) {
 
         holder.tv_id.setText(list.get(position).getId());
         holder.tv_idpaketphoto.setText(list.get(position).getIdPaketphoto());
         holder.tv_idjenispaket.setText(list.get(position).getIdJenispaket());
         holder.tv_namapaketphoto.setText(list.get(position).getNamaPaketphoto());
         holder.tv_tglupdate.setText(list.get(position).getTanggalUpdate());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DescActivity.class);
+                intent.putExtra("data", list.get(position).getIdJenispaket());
+                context.startActivity(intent);
+            }
+        });
 
 
     }
