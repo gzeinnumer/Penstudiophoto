@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="putih">#ffffff</color>
+    <color name="gold">#DAA520</color>
+    <color name="abuabu">#808080</color>
+    <color name="hitam">#000000</color>
+    <color name="merahmuda">#FFB6C1</color>
+    <color name="blueviolet">#8A2BE2</color>
+    <color name="coklat">#D2691E</color>
+    <color name="brown">#A52A2A</color>
+    <color name="abuabumuda">#D3D3D3</color>
+    <color name="abuabutua">#A9A9A9</color>
+    <color name="mistyrose">#FFE4E1</color>
+    <color name="peru">#CD853F</color>
+    <color name="maroon">#800000</color>
+    <color name="darkgreen">#006400</color>
+    <color name="olivedrab">#6B8E23</color>
+    <color name="emas">#FFD700</color>
+    <color name="palevioletred">#DB7093</color>
+    <color name="krimson">#DC143C</color>
+    <color name="merahbata">#B22222</color>
+    <color name="merahindian">#CD5C5C</color>
+    <color name="salmongelap">#E9967A</color>
+    <color name="salmonterang">#FFA07A</color>
+    <color name="jinggatua">#FF8C00</color>
+    <color name="jingga">#FFA500</color>
+    <color name="kuning">#FFFF00</color>
+    <color name="bluelight">#05c3f9</color>
+    <color name="bluedark">#0691b8</color>
+
+</resources>

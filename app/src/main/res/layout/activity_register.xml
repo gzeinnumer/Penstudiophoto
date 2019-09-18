@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bluedark"
+    tools:context=".activity.Register">
+
+    <ImageView
+        android:id="@+id/reg_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logodua"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/reg_judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="@color/putih"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif" />
+
+    <EditText
+        android:id="@+id/ed_nama"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Nama Pelanggan"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:textStyle="bold"
+        android:paddingTop="15dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/ed_jekel"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Jekel"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+
+    <EditText
+        android:id="@+id/ed_email"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Email"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/ed_pass"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Password"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/ed_confirmpass"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Confirm Password"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+
+    <EditText
+        android:id="@+id/ed_notelp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="No Telephone"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:paddingTop="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/ed_alamat"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Alamat"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnreg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/brown"
+        android:textStyle="bold"/>
+
+</LinearLayout>
+</ScrollView>

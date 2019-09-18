@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/tampilanlist"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:title="Tampilan List" />
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Filter Studio Photo" />
+
+    <item
+        android:id="@+id/tampilanpeta"
+        android:icon="@drawable/ic_place_black_24dp"
+        android:title="Tampilan Peta" />
+
+</menu>

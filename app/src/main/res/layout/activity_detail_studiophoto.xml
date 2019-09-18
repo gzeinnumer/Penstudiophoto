@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bluedark"
+        android:orientation="vertical"
+        tools:context=".activity.DetailStudiophoto">
+
+        <TextView
+            android:id="@+id/tv_detailidstudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id Studio Photo"
+            android:visibility="gone"
+            android:textColor="@color/putih"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailidpemilikstudiophoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id Pemilik Studio Photo"
+            android:visibility="gone"
+            android:textColor="@color/putih"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailidpaketphoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id Paket Photo"
+            android:visibility="gone"
+            android:textColor="@color/putih"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailidlokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id lokasi"
+            android:textColor="@color/putih"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailnamastudiophoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Studio Photo"
+            android:textColor="@color/putih"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailalamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textColor="@color/putih"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detaillatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latitude"
+            android:textColor="@color/putih"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detaillongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Longitude"
+            android:textColor="@color/putih"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailketerangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keterangan"
+            android:textColor="@color/putih"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detailfoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gambar"
+            android:textColor="@color/putih"
+            android:textSize="20dp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fotostudiophoto"/>
+
+        <TextView
+            android:id="@+id/tv_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ini Paket Photo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnklik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Maps"
+            android:background="@color/brown"
+            android:textStyle="bold" />
+
+        <Button
+            android:text="Booking"
+            android:onClick="onBokingClicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</ScrollView>
